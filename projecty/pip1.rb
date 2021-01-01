@@ -9,7 +9,7 @@ def result=(new_value)
 end
 def name_user(name)
   puts "Your name?"
-  @name=gets.chomp.to_i
+  @name=gets.chomp
   puts "Your name: #{@name}"
 end
 def hight_user(hight)

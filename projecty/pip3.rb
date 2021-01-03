@@ -1,15 +1,12 @@
 def parametrs
   puts "Enter a,b,c"
   a=gets.chomp
-  b=gets.chomp
-  c=gets.chomp
-  if a && b&& c =~/^\d+$/
-    return a,b,c
-    puts "a= #{a},b= #{b}, c= #{c} "
+  if a =~/^\d+$/
+    return a.to_i
   else
     puts "Error"
   end
-  return a,b,c
+  return a
 end
 def rezult(a,b,c)
   if a>b && a>c
@@ -26,13 +23,14 @@ def rezult(a,b,c)
   end
 end
 def counting(a,b,c)
-  if (a*a) >((b*b)+(c*c)) || (b*b) >((a*a)+(c*c)) || (b*b) >((a*a)+(c*c))
-  puts "Pryamoygolnii"
-  elsif (a*a) == ((b*b)+(c*c)) || (b*b) == ((a*a)+(c*c)) || (b*b) ==((a*a)+(c*c))
-    puts "Ravnostoronii"
+  if (a*a) == ((b*b)+(c*c)) || (b*b) == ((a*a)+(c*c)) || (b*b) ==((a*a)+(c*c))
+    puts "Pryamoygolnii"
+  else
+    puts "Pryamoygol'nii"
   end
 end
 a=parametrs
 b=parametrs
 c=parametrs
+rezult(a,b,c)
 counting(a,b,c)

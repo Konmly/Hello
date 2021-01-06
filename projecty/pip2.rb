@@ -21,7 +21,7 @@ def height_user
   return height
 end
 def rezult_s(base,height)
-  s=1/(2*base*height)
+  s=1.0/(2*base*height)
   puts "S= #{s.to_f}"
 end
 base= base_user
